@@ -6,6 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import  styles from './GlobalGrid.module.css';
 import cx from 'classnames';
+import NumberFormat from 'react-number-format';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -122,12 +123,22 @@ export default function Global() {
         <Grid item xs={4}>
           <Paper className={cx(classes.paper, styles.infected )}>
               <Typography variant="h4" style={{color:"#8B008B"}} >Infected</Typography>
-  <Typography variant="h5" color="primary">{GlobalData && GlobalData.results && GlobalData.results[0].total_cases}</Typography>
+  <Typography variant="h5" color="primary">
+  <NumberFormat value={GlobalData && GlobalData.results && GlobalData.results[0].total_cases} displayType={'text'} thousandSeparator={true}  />
+    
+    </Typography>
   <Typography variant="subtitle2" gutterBottom>Total Number Of Infected Patients </Typography>
               </Paper>
               <Paper className={cx(classes.paper, styles.active )}>
               <Typography variant="h4" style={{color:"orange"}}>Active</Typography>
-              <Typography variant="h5" color="primary">{GlobalData && GlobalData.results && GlobalData.results[0].total_active_cases+GlobalData.results[0].total_unresolved}</Typography>
+       
+           <Typography variant="h5" color="primary">
+           <NumberFormat value={GlobalData && GlobalData.results && GlobalData.results[0].total_active_cases
+           +GlobalData.results[0].total_unresolved} 
+            displayType={'text'} thousandSeparator={true} />
+               {/* {GlobalData && GlobalData.results && GlobalData.results[0].total_active_cases+GlobalData.results[0].total_unresolved}  */}
+               </Typography>
+          
               <Typography variant="subtitle2" gutterBottom>Total Number Of Active Patients </Typography>
 
               </Paper>
@@ -135,14 +146,21 @@ export default function Global() {
 
           <Paper className={cx(classes.paper, styles.recovered )}>
           <Typography variant="h4" style={{color:"green"}}>Recovered</Typography>
-          <Typography variant="h5" color="primary">{GlobalData && GlobalData.results && GlobalData.results[0].total_recovered}</Typography>
+          <Typography variant="h5" color="primary">
+          <NumberFormat value={GlobalData && GlobalData.results && GlobalData.results[0].total_recovered}
+           displayType={'text'} thousandSeparator={true}  />
+          
+          </Typography>
           <Typography variant="subtitle2" gutterBottom>Total Number Of Recovered Patients </Typography>
 
 
           </Paper>
           <Paper className={cx(classes.paper, styles.deaths)}>
           <Typography variant="h4" color="secondary">Deaths</Typography>
-          <Typography variant="h5" color="primary">{GlobalData && GlobalData.results && GlobalData.results[0].total_deaths}</Typography>
+          <Typography variant="h5" color="primary">
+          <NumberFormat value={GlobalData && GlobalData.results && GlobalData.results[0].total_deaths} displayType={'text'} thousandSeparator={true}/>
+            
+          </Typography>
           <Typography variant="subtitle2" gutterBottom>Total Number Of Deaths </Typography>
 
 
