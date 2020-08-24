@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import  styles from './GlobalGrid.module.css';
 import cx from 'classnames';
 import NumberFormat from 'react-number-format';
+import Countries from './Countries.js'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -65,6 +66,7 @@ export default function Global() {
               <Typography variant="h5" color="primary">{loading}</Typography>
   <Typography variant="subtitle2" gutterBottom>Total Number Of Infected Patients </Typography>
               </Paper>
+             
               <Paper className={cx(classes.paper, styles.active )}>
               <Typography variant="h4" style={{color:"orange"}}>Active</Typography>
               <Typography variant="h5" color="primary">{loading}</Typography>
@@ -88,11 +90,16 @@ export default function Global() {
 
           </Paper>
         </Grid>
+
         <Grid item xs={8}>
-          <Paper className={classes.paper}>CountryPicker</Paper>
+        PAkistan
         </Grid>
+
+
+
       </Grid>
-      
+    
+       
     </div>
 
       
@@ -118,8 +125,8 @@ export default function Global() {
   return (
     <div>
      
-      <Grid container spacing={3}>
-    
+      <Grid container spacing={3}> 
+      
         <Grid item xs={4}>
           <Paper className={cx(classes.paper, styles.infected )}>
               <Typography variant="h4" style={{color:"#8B008B"}} >Infected</Typography>
@@ -166,10 +173,18 @@ export default function Global() {
 
           </Paper>
         </Grid>
+        
+
         <Grid item xs={8}>
-          <Paper className={classes.paper}>CountryPicker</Paper>
         </Grid>
+
+
+
+
+        
       </Grid>
+
+      
       
     </div>
   );
