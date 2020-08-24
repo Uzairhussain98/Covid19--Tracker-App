@@ -60,28 +60,35 @@ export default function Global() {
      
       <Grid container spacing={3}>
     
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <Paper className={cx(classes.paper, styles.infected )}>
               <Typography variant="h4" style={{color:"#8B008B"}} >Infected</Typography>
               <Typography variant="h5" color="primary">{loading}</Typography>
   <Typography variant="subtitle2" gutterBottom>Total Number Of Infected Patients </Typography>
               </Paper>
-             
+             </Grid>
+
+             <Grid item xs={3}>
+
               <Paper className={cx(classes.paper, styles.active )}>
               <Typography variant="h4" style={{color:"orange"}}>Active</Typography>
               <Typography variant="h5" color="primary">{loading}</Typography>
               <Typography variant="subtitle2" gutterBottom>Total Number Of Active Patients </Typography>
 
               </Paper>
+              </Grid>
 
+              <Grid item xs={3}>
 
           <Paper className={cx(classes.paper, styles.recovered )}>
           <Typography variant="h4" style={{color:"green"}}>Recovered</Typography>
           <Typography variant="h5" color="primary">{loading}</Typography>
           <Typography variant="subtitle2" gutterBottom>Total Number Of Recovered Patients </Typography>
+           </Paper>
+           </Grid>
 
+           <Grid item xs={3}>
 
-          </Paper>
           <Paper className={cx(classes.paper, styles.deaths)}>
           <Typography variant="h4" color="secondary">Deaths</Typography>
           <Typography variant="h5" color="primary">{loading}</Typography>
@@ -89,12 +96,10 @@ export default function Global() {
 
 
           </Paper>
-        </Grid>
+          </Grid>
+      
 
-        <Grid item xs={8}>
-        PAkistan
-        </Grid>
-
+    
 
 
       </Grid>
@@ -127,7 +132,7 @@ export default function Global() {
      
       <Grid container spacing={3}> 
       
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <Paper className={cx(classes.paper, styles.infected )}>
               <Typography variant="h4" style={{color:"#8B008B"}} >Infected</Typography>
   <Typography variant="h5" color="primary">
@@ -136,6 +141,10 @@ export default function Global() {
     </Typography>
   <Typography variant="subtitle2" gutterBottom>Total Number Of Infected Patients </Typography>
               </Paper>
+          </Grid>
+
+             
+          <Grid item xs={3}>
               <Paper className={cx(classes.paper, styles.active )}>
               <Typography variant="h4" style={{color:"orange"}}>Active</Typography>
        
@@ -149,7 +158,9 @@ export default function Global() {
               <Typography variant="subtitle2" gutterBottom>Total Number Of Active Patients </Typography>
 
               </Paper>
+              </Grid>
 
+              <Grid item xs={3}>
 
           <Paper className={cx(classes.paper, styles.recovered )}>
           <Typography variant="h4" style={{color:"green"}}>Recovered</Typography>
@@ -159,9 +170,12 @@ export default function Global() {
           
           </Typography>
           <Typography variant="subtitle2" gutterBottom>Total Number Of Recovered Patients </Typography>
+</Paper>         
+   </Grid>
 
+<Grid item xs={3}>
 
-          </Paper>
+          
           <Paper className={cx(classes.paper, styles.deaths)}>
           <Typography variant="h4" color="secondary">Deaths</Typography>
           <Typography variant="h5" color="primary">
@@ -172,18 +186,13 @@ export default function Global() {
 
 
           </Paper>
+          </Grid>
+
+
         </Grid>
         
 
-        <Grid item xs={8}>
-        </Grid>
-
-
-
-
-        
-      </Grid>
-
+       
       
       
     </div>
