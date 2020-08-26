@@ -1,16 +1,34 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import GlobalGrid from './components/GlobalGrid';
-import Countries from './components/Countries'
+import Home from './components/GlobalGrid';
+import Graph from './components/Graph'
+import About from './components/About'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+
+
+
+
+
 function App() {
   return (
+    <Router>
     <div>
       <Header/>
-      <GlobalGrid/>
-      <Countries/>
+      <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route path="/Graph" element={<Graph/>} />
+          <Route path="/About" element={<About/>} />
+        </Routes>
+      
       
       </div>
+      </Router>
   );
 }
 

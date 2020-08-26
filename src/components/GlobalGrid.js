@@ -9,6 +9,7 @@ import cx from 'classnames';
 import NumberFormat from 'react-number-format';
 import Countries from './Countries.js'
 
+
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'grid',
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Global() {
+export default function Home() {
   const classes = useStyles();
 
   const [GlobalData,setGlobalData] = useState();
@@ -192,7 +193,7 @@ export default function Global() {
         </Grid>
         
 
-       
+       <Countries/>
       
       
     </div>
