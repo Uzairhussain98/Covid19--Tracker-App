@@ -28,6 +28,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
+
+
+
 export default function Home() {
   const classes = useStyles();
 
@@ -49,10 +54,10 @@ export default function Home() {
       }
 
       fetchGlobalData();
-
-
+    
   },[])
-
+  
+  
   const loading = "Loading" ;
 
   if (isLoading){
@@ -195,7 +200,15 @@ export default function Home() {
 
        <Countries/>
       
-      
+
+
+
     </div>
+
+
+
+ 
   );
 }
+
+
