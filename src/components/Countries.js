@@ -2,14 +2,14 @@ import React ,{useState , useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios' ;
 import Columns from 'react-columns';
 import TextField from '@material-ui/core/TextField';
+import NumberFormat from 'react-number-format';
+
 
 
 
@@ -86,7 +86,7 @@ const Countries = () =>  {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt="Country"
           height="180"
           image={data.countryInfo.flag}
           title="Contemplative Reptile"
@@ -96,7 +96,9 @@ const Countries = () =>  {
           {data.country}
           </Typography>
           <Typography variant="body1" color="textSecondary" component="p">
-          Total Cases {data.cases}
+          Total Cases- 
+          <NumberFormat value={data.cases} displayType={'text'} thousandSeparator={true}  />
+         
           </Typography>
           <Typography variant="body1" color="textSecondary" component="p">
           Total Deaths {data.deaths}

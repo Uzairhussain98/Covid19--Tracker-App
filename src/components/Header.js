@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 
 import './link.css'
 import {
-  BrowserRouter as Router,
   Link,
   
 } from 'react-router-dom';
@@ -63,9 +62,3 @@ export default function Header() {
 
 
 
-function Home(){
-  return(
-  <div>
-    <h1>Hello From Home</h1>
-    </div>
-  )}
